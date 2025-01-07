@@ -1,0 +1,40 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+
+  &__element {
+    color: white;
+    background-color: $bg-black-color;
+    border: none;
+    border-bottom: 1px solid #2f2f2f;
+    outline: none;
+    padding-bottom: 19px;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    &:focus {
+      border-bottom: 1px solid $blue-text-color;
+      &::placeholder {
+        color: $blue-text-color;
+      }
+    }
+
+    &:user-invalid {
+      border-bottom: 1px solid red;
+      &::placeholder {
+        color: red;
+      }
+    }
+  }
+
+  &__message {
+    resize: none;
+    padding-bottom: 67px;
+    margin-bottom: 30px;
+  }
+}
